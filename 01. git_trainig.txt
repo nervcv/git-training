@@ -563,3 +563,140 @@ HEO\Heo (12):
 
 
 C:\Dropbox\Git\study\git-training>
+
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/nervcv/git-training-1
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[remote "upstream"]
+	url = https://github.com/Taeung/git-training.git
+	fetch = +refs/heads/*:refs/remotes/upstream/*
+
+#fetch는 가져와서 .git 폴더에 숨겨두는 것이고, pull은 merge를 동반한다.
+#rebase 테스트
+
+C:\Dropbox\Git\study\git-training-1>git rebase -i --root
+Stopped at 864cf0f... Add knapsack problem PDF
+You can amend the commit now, with
+
+        git commit --amend
+
+Once you are satisfied with your changes, run
+
+        git rebase --continue
+
+
+C:\Dropbox\Git\study\git-training-1>git shortlog
+Taeung Song (2):
+      Add README file
+      Add knapsack problem PDF
+
+
+C:\Dropbox\Git\study\git-training-1>git commit --amend -sm "rebase -i test"
+[detached HEAD 02128c7] rebase -i test
+ Author: Taeung Song <treeze.taeung@gmail.com>
+ Date: Fri Mar 25 12:00:37 2016 +0900
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 packing_knapsack/knapsack_problem.pdf
+
+C:\Dropbox\Git\study\git-training-1>git status
+interactive rebase in progress; onto fb7a4a9
+Last commands done (2 commands done):
+   pick 73e7acf Add README file
+   edit 864cf0f Add knapsack problem PDF
+Next commands to do (12 remaining commands):
+   pick f9b87bb packing knapsack: Basic code solving this question
+   pick 91f2d24 packing knapsack: Change basic code
+  (use "git rebase --edit-todo" to view and edit)
+You are currently editing a commit while rebasing branch 'develop' on 'fb7a4a9'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+nothing to commit, working tree clean
+
+C:\Dropbox\Git\study\git-training-1>git shortlog
+Taeung Song (2):
+      Add README file
+      rebase -i test
+
+
+C:\Dropbox\Git\study\git-training-1>git rebase --continue
+Successfully rebased and updated refs/heads/develop.
+
+C:\Dropbox\Git\study\git-training-1>git shortlog
+HEO\Heo (1):
+      test pull request
+
+Taeung Song (13):
+      Add README file
+      rebase -i test
+      packing knapsack: Basic code solving this question
+      packing knapsack: Change basic code
+      packing knapsack: Rename packing_knapsack to pack_knapsack
+      packing knapsack: Input & Output
+      packing knapsack: Add test script
+      packing knapsack: Add test script generator
+      packing knapsack: Implement code to solve this question
+      test git-pull-request
+      New version git-training
+      Add v3 PDF
+      Rebase test
+
+
+C:\Dropbox\Git\study\git-training-1>
+
+#blame : 라인별 누가 커밋했는지 확인가능
+
+C:\Dropbox\Git\study\git-training-1>cd..
+
+C:\Dropbox\Git\study>cd git-training
+
+C:\Dropbox\Git\study\git-training>git blame "01. git_trainig.txt"
+
+aa1828fd (HEO\Heo           2018-07-15 20:55:32 +0900   1) <EF><BB><BF>
+ecebd45a (HEO\Heo           2018-07-15 20:44:34 +0900   2) c:\Dropbox\Git\study\git_training\step_01>git add README.md
+ecebd45a (HEO\Heo           2018-07-15 20:44:34 +0900   3)
+ecebd45a (HEO\Heo           2018-07-15 20:44:34 +0900   4) c:\Dropbox\Git\study\git_training\step_01>git status
+ecebd45a (HEO\Heo           2018-07-15 20:44:34 +0900   5) On branch master
+ecebd45a (HEO\Heo           2018-07-15 20:44:34 +0900   6)
+
+C:\Dropbox\Git\study\git-training>git show aa1828fd
+commit aa1828fd98af484addfe7672cb2283aa98e29cee
+Author: HEO\Heo <cloudlin.heo@gmail.com>
+Date:   Sun Jul 15 20:55:32 2018 +0900
+
+    git status & diff
+
+diff --git a/01. git_trainig.txt b/01. git_trainig.txt
+index 07bf79a..f02d66c 100644
+--- a/01. git_trainig.txt
++++ b/01. git_trainig.txt
+@@ -1,4 +1,4 @@
+-
++<EF><BB><BF>
+ c:\Dropbox\Git\study\git_training\step_01>git add README.md
+
+ c:\Dropbox\Git\study\git_training\step_01>git status
+@@ -71,4 +71,7 @@ Untracked files:
+
+ no changes added to commit (use "git add" and/or "git commit -a")
+
+-c:\Dropbox\Git\study\git_training\step_01>
++# <ED><8C><8C><EC><9D><BC><EB><93><A4><EC><9D><98> <EA><B0><81><EA><B0><81> <EB><B3><80><EA><B2><BD><EC><A0><84><ED>84> <EB><82><B4><EC><9A><A9><EC><9D><84> <ED><99><95><EC><9D><B8><ED><95><A0> <EC><88><98>
+<EC><9E><88><EB><8B><A4>.
++c:\Dropbox\Git\study\git_training\step_01>git show
++# <ED><8C><8C><EC><9D><BC><EB><93><A4><EC><9D><98> <EC><B5><9C><EC><8B><A0><EC><9D><98> <EA><B8><B0><EB><A1><9D><EB><90><9C> <EC><97><AD><EC><82><AC><EC><99><80> <ED><98><84><EC><9E><AC><EC><9D><98> <EC><B0>
+<A8><EC><9D><B4><EB><A5><BC> <ED><99><95><EC><9D><B8><ED><95><A0> <EC><88><98> <EC><9E><88><EB><8B><A4>.
++c:\Dropbox\Git\study\git_training\step_01>git diff
+\ No newline at end of file
+
+C:\Dropbox\Git\study\git-training>
