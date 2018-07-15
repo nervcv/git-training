@@ -229,5 +229,28 @@ commit 903fbc8a641a589279848ba96481c0b0d5a64ab3
 Author: HEO\Heo <cloudlin.heo@gmail.com>
 Date:   Sun Jul 15 20:29:19 2018 +0900
 
-:^C
+C:\Dropbox\Git\study\git-training>git commit --amend
+[master 77895e9] git --amend commend
+ Date: Sun Jul 15 21:34:07 2018 +0900
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Dropbox\Git\study\git-training>git push origin master
+To https://github.com/nervcv/git-training.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/nervcv/git-training.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Dropbox\Git\study\git-training>git push origin master --force
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 402 bytes | 402.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/nervcv/git-training.git
+ + 679a804...77895e9 master -> master (forced update)
+
 C:\Dropbox\Git\study\git-training>
