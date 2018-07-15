@@ -344,3 +344,133 @@ To https://github.com/nervcv/git-training.git
  + 0797312...9a0d2c6 master -> master (forced update)
 
 C:\Dropbox\Git\study\git-training>
+
+#pull_reqeust
+
+C:\Dropbox\Git\study>git clone https://github.com/nervcv/git-training-1
+Cloning into 'git-training-1'...
+remote: Counting objects: 50, done.
+remote: Total 50 (delta 0), reused 0 (delta 0), pack-reused 50
+Unpacking objects: 100% (50/50), done.
+
+C:\Dropbox\Git\study>
+
+C:\Dropbox\Git\study\git-training-1>git shortlog
+Taeung Song (12):
+      Add README file
+      Add knapsack problem PDF
+      packing knapsack: Basic code solving this question
+      packing knapsack: Change basic code
+      packing knapsack: Rename packing_knapsack to pack_knapsack
+      packing knapsack: Input & Output
+      packing knapsack: Add test script
+      packing knapsack: Add test script generator
+      packing knapsack: Implement code to solve this question
+      test git-pull-request
+      New version git-training
+      Add v3 PDF
+
+
+C:\Dropbox\Git\study\git-training-1>git checkout -b develop
+Switched to a new branch 'develop'
+
+C:\Dropbox\Git\study\git-training-1>git status
+On branch develop
+nothing to commit, working tree clean
+
+C:\Dropbox\Git\study\git-training-1>git branch
+* develop
+  master
+
+C:\Dropbox\Git\study\git-training-1>dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 9AF2-EA5F
+
+ C:\Dropbox\Git\study\git-training-1 디렉터리
+
+2018-07-15  오후 09:57    <DIR>          .
+2018-07-15  오후 09:57    <DIR>          ..
+2018-07-15  오후 09:57    <DIR>          img
+2018-07-15  오후 09:57    <DIR>          packing_knapsack
+2018-07-15  오후 09:57    <DIR>          pull_reqeust_test
+2018-07-15  오후 09:57             1,376 README.md
+               1개 파일               1,376 바이트
+               5개 디렉터리  124,789,219,328 바이트 남음
+
+C:\Dropbox\Git\study\git-training-1>cd pull_reqeust_test
+
+C:\Dropbox\Git\study\git-training-1\pull_reqeust_test>mkdir nervcv
+
+C:\Dropbox\Git\study\git-training-1\pull_reqeust_test>dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 9AF2-EA5F
+
+ C:\Dropbox\Git\study\git-training-1\pull_reqeust_test 디렉터리
+
+2018-07-15  오후 10:04    <DIR>          .
+2018-07-15  오후 10:04    <DIR>          ..
+2018-07-15  오후 10:04    <DIR>          nervcv
+2018-07-15  오후 09:57    <DIR>          taeung
+               0개 파일                   0 바이트
+               4개 디렉터리  124,790,337,536 바이트 남음
+
+C:\Dropbox\Git\study\git-training-1\pull_reqeust_test>cd nervcv
+
+C:\Dropbox\Git\study\git-training-1\pull_reqeust_test\nervcv>git status
+On branch develop
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Dropbox\Git\study\git-training-1\pull_reqeust_test\nervcv>git add ./
+
+C:\Dropbox\Git\study\git-training-1\pull_reqeust_test\nervcv>git status
+On branch develop
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   blank.txt
+
+
+C:\Dropbox\Git\study\git-training-1\pull_reqeust_test\nervcv>git commit -sm "test pull request"
+[develop 9e70e83] test pull request
+ 1 file changed, 1 insertion(+)
+ create mode 100644 pull_reqeust_test/nervcv/blank.txt
+
+C:\Dropbox\Git\study\git-training-1\pull_reqeust_test\nervcv>git shortlog
+HEO\Heo (1):
+      test pull request
+
+Taeung Song (12):
+      Add README file
+      Add knapsack problem PDF
+      packing knapsack: Basic code solving this question
+      packing knapsack: Change basic code
+      packing knapsack: Rename packing_knapsack to pack_knapsack
+      packing knapsack: Input & Output
+      packing knapsack: Add test script
+      packing knapsack: Add test script generator
+      packing knapsack: Implement code to solve this question
+      test git-pull-request
+      New version git-training
+      Add v3 PDF
+
+
+C:\Dropbox\Git\study\git-training-1\pull_reqeust_test\nervcv>git status
+On branch develop
+nothing to commit, working tree clean
+
+C:\Dropbox\Git\study\git-training-1\pull_reqeust_test\nervcv>git push origin develop
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 405 bytes | 202.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/nervcv/git-training-1
+ * [new branch]      develop -> develop
+
+C:\Dropbox\Git\study\git-training-1\pull_reqeust_test\nervcv>
