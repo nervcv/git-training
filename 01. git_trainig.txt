@@ -283,3 +283,64 @@ On branch master
 nothing to commit, working tree clean
 
 C:\Dropbox\Git\study\git-training>
+
+C:\Dropbox\Git\study\git-training>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        blank.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Dropbox\Git\study\git-training>git add blank.txt
+
+C:\Dropbox\Git\study\git-training>git commit -m test
+[master 0797312] test
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 blank.txt
+
+C:\Dropbox\Git\study\git-training>git push origin master
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 350 bytes | 350.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/nervcv/git-training.git
+   9a0d2c6..0797312  master -> master
+
+C:\Dropbox\Git\study\git-training>git shortlog
+HEO\Heo (10):
+      git trainig first commit
+      git_trainig text file add
+      git status & diff
+      git log check
+      add git-trainig.pdf
+      git remote&push
+      git --amend commend
+      git commit --amend
+      git reset
+      test
+
+
+C:\Dropbox\Git\study\git-training>git reset HEAD~1
+
+C:\Dropbox\Git\study\git-training>git shortlog
+HEO\Heo (9):
+      git trainig first commit
+      git_trainig text file add
+      git status & diff
+      git log check
+      add git-trainig.pdf
+      git remote&push
+      git --amend commend
+      git commit --amend
+      git reset
+
+
+C:\Dropbox\Git\study\git-training>git push origin master --force
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/nervcv/git-training.git
+ + 0797312...9a0d2c6 master -> master (forced update)
+
+C:\Dropbox\Git\study\git-training>
