@@ -474,3 +474,92 @@ To https://github.com/nervcv/git-training-1
  * [new branch]      develop -> develop
 
 C:\Dropbox\Git\study\git-training-1\pull_reqeust_test\nervcv>
+
+C:\Dropbox\Git\study\git-training>git checkout -b develop
+Switched to a new branch 'develop'
+
+C:\Dropbox\Git\study\git-training>git branch
+* develop
+  master
+
+C:\Dropbox\Git\study\git-training>git status
+On branch develop
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        branch for develop.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Dropbox\Git\study\git-training>git add "branch for develop.txt"
+
+C:\Dropbox\Git\study\git-training>git commit -sm "branch test"
+[develop f6566f2] branch test
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 branch for develop.txt
+
+C:\Dropbox\Git\study\git-training>git shortlog
+HEO\Heo (12):
+      git trainig first commit
+      git_trainig text file add
+      git status & diff
+      git log check
+      add git-trainig.pdf
+      git remote&push
+      git --amend commend
+      git commit --amend
+      git reset
+      reset HEAD~1 & reset remote commit
+      pull_request test
+      branch test
+
+
+C:\Dropbox\Git\study\git-training>git checkout master
+Switched to branch 'master'
+
+C:\Dropbox\Git\study\git-training>git shortlog
+HEO\Heo (11):
+      git trainig first commit
+      git_trainig text file add
+      git status & diff
+      git log check
+      add git-trainig.pdf
+      git remote&push
+      git --amend commend
+      git commit --amend
+      git reset
+      reset HEAD~1 & reset remote commit
+      pull_request test
+
+
+C:\Dropbox\Git\study\git-training>git merget develop
+git: 'merget' is not a git command. See 'git --help'.
+
+The most similar commands are
+        merge
+        mergetool
+
+C:\Dropbox\Git\study\git-training>git merge develop
+Updating 3853e8a..f6566f2
+Fast-forward
+ branch for develop.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 branch for develop.txt
+
+C:\Dropbox\Git\study\git-training>git shortlog
+HEO\Heo (12):
+      git trainig first commit
+      git_trainig text file add
+      git status & diff
+      git log check
+      add git-trainig.pdf
+      git remote&push
+      git --amend commend
+      git commit --amend
+      git reset
+      reset HEAD~1 & reset remote commit
+      pull_request test
+      branch test
+
+
+C:\Dropbox\Git\study\git-training>
