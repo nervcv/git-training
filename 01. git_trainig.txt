@@ -75,3 +75,78 @@ no changes added to commit (use "git add" and/or "git commit -a")
 c:\Dropbox\Git\study\git_training\step_01>git show
 # 파일들의 최신의 기록된 역사와 현재의 차이를 확인할 수 있다.
 c:\Dropbox\Git\study\git_training\step_01>git diff
+
+C:\Dropbox\Git\study\git_training\step_01>git commit -m "git status & diff"
+On branch master
+Changes not staged for commit:
+        modified:   01. git_trainig.txt
+
+no changes added to commit
+
+C:\Dropbox\Git\study\git_training\step_01>git add *
+
+C:\Dropbox\Git\study\git_training\step_01>git commit -m "git status & diff"
+[master aa1828f] git status & diff
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+C:\Dropbox\Git\study\git_training\step_01>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Dropbox\Git\study\git_training\step_01>git shortlog
+HEO\Heo (3):
+      git trainig first commit
+      git_trainig text file add
+      git status & diff
+
+
+C:\Dropbox\Git\study\git_training\step_01>git show
+commit aa1828fd98af484addfe7672cb2283aa98e29cee (HEAD -> master)
+Author: HEO\Heo <cloudlin.heo@gmail.com>
+Date:   Sun Jul 15 20:55:32 2018 +0900
+
+    git status & diff
+
+diff --git a/01. git_trainig.txt b/01. git_trainig.txt
+index 07bf79a..f02d66c 100644
+--- a/01. git_trainig.txt
++++ b/01. git_trainig.txt
+@@ -1,4 +1,4 @@
+-
++<EF><BB><BF>
+ c:\Dropbox\Git\study\git_training\step_01>git add README.md
+
+ c:\Dropbox\Git\study\git_training\step_01>git status
+@@ -71,4 +71,7 @@ Untracked files:
+
+ no changes added to commit (use "git add" and/or "git commit -a")
+
+-c:\Dropbox\Git\study\git_training\step_01>
++# <ED><8C><8C><EC><9D><BC><EB><93><A4><EC><9D><98> <EA><B0><81><EA><B0><81> <EB><B3><80><EA><B2><BD><EC><A0><84><ED>84> <EB><82><B4><EC><9A><A9><EC><9D><84> <ED><99><95><EC><9D><B8><ED><95><A0> <EC><88><98>
+<EC><9E><88><EB><8B><A4>.
++c:\Dropbox\Git\study\git_training\step_01>git show
++# <ED><8C><8C><EC><9D><BC><EB><93><A4><EC><9D><98> <EC><B5><9C><EC><8B><A0><EC><9D><98> <EA><B8><B0><EB><A1><9D><EB><90><9C> <EC><97><AD><EC><82><AC><EC><99><80> <ED><98><84><EC><9E><AC><EC><9D><98> <EC><B0>
+<A8><EC><9D><B4><EB><A5><BC> <ED><99><95><EC><9D><B8><ED><95><A0> <EC><88><98> <EC><9E><88><EB><8B><A4>.
++c:\Dropbox\Git\study\git_training\step_01>git diff
+\ No newline at end of file
+
+C:\Dropbox\Git\study\git_training\step_01>git log
+commit aa1828fd98af484addfe7672cb2283aa98e29cee (HEAD -> master)
+Author: HEO\Heo <cloudlin.heo@gmail.com>
+Date:   Sun Jul 15 20:55:32 2018 +0900
+
+    git status & diff
+
+commit ecebd45afd22d82a3c8ebe92b779628ed980e7a8
+Author: HEO\Heo <cloudlin.heo@gmail.com>
+Date:   Sun Jul 15 20:44:34 2018 +0900
+
+    git_trainig text file add
+
+commit 903fbc8a641a589279848ba96481c0b0d5a64ab3
+Author: HEO\Heo <cloudlin.heo@gmail.com>
+Date:   Sun Jul 15 20:29:19 2018 +0900
+
+    git trainig first commit
+
+C:\Dropbox\Git\study\git_training\step_01>
