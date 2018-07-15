@@ -151,7 +151,7 @@ Date:   Sun Jul 15 20:29:19 2018 +0900
 
 C:\Dropbox\Git\study\git_training\step_01>
 
-# 폴더 변경 및 원격 add와 push
+# 폴더 변경 및 원격 add와 push, remote는 원격 저장소를 설정하는 기능으로 최초 1회 수행(?)
 
 C:\Dropbox\Git\study\git-training>git status
 On branch master
