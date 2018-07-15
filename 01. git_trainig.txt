@@ -254,3 +254,32 @@ To https://github.com/nervcv/git-training.git
  + 679a804...77895e9 master -> master (forced update)
 
 C:\Dropbox\Git\study\git-training>
+
+C:\Dropbox\Git\study\git-training>git add blank.txt
+
+C:\Dropbox\Git\study\git-training>git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   blank.txt
+
+
+C:\Dropbox\Git\study\git-training>git reset
+
+C:\Dropbox\Git\study\git-training>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        blank.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Dropbox\Git\study\git-training>del blank.txt
+
+C:\Dropbox\Git\study\git-training>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Dropbox\Git\study\git-training>
